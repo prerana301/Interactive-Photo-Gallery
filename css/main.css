@@ -1,0 +1,167 @@
+/*------------Basic Styles-------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #29373B;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+/*----------Layout Containers----------*/
+
+.wrap {
+  width: 100%;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*---------------search---------------*/
+
+.search-box {
+  width: 50%;
+  margin-top: 2.6em;
+  margin-bottom: 2.6em;
+}
+
+#userInput {
+  background: #29373B;
+  color: #E8FAFF;
+  font-size: 1.5em;
+  width: 100%;
+  padding: .5em;
+  border: none;
+  border-bottom: .3em solid #E8FAFF;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+#userInput::placeholder {
+  color: #E8FAFF;
+  font-style: italic;
+  opacity: .5;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+#userInput:focus {
+  outline: none;
+  border-bottom: .3em solid #E8FAFF;
+}
+
+/*----------Gallery Box----------*/
+
+.gallery-box {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 100%;
+ 
+}
+
+
+
+/*-------Gallery Zoom-----------*/
+
+.lg-backdrop {
+  background: #29373B;
+}
+
+.lg-backdrop.in {
+  opacity: .8;
+}
+
+.lg-sub-html {
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0);
+  bottom: 15%;
+  padding: 5px;
+}
+
+.lg-sub-html, .lg-toolbar {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/*----------Thumbnail Styles----------*/
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  margin-bottom: 2.4em;
+}
+
+.thumbnail a {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.thumbnail img {
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, .8);
+}
+
+/*----------media queries------------*/
+
+@media (min-width:480px) {
+  .thumbnail {
+    width: 50%;
+  }
+}
+
+@media (min-width:768px) {
+  .wrap {
+    width: 95%;
+  }
+  .search-box {
+    width: 50%;
+  }
+  .lg-sub-html {
+    bottom: 10%;
+    padding: 10px 40px;
+  }
+  .thumbnail {
+    width: 33%;
+  }
+}
+
+@media (min-width:1024px) {
+  .wrap {
+    width: 90%;
+  }
+
+  .lg {
+    width: 70% !important;
+  }
+  .thumbnail {
+    width: 25%;
+  }
+}
+
+@media (min-width:1280px) {
+  .wrap {
+    width: 85%;
+  }
+  .lg {
+    width: 60% !important;
+  }
+}
+
+@media (min-width:1440px) {
+  .wrap {
+    width: 75%;
+  }
+  .lg {
+    width: 50% !important;
+  }
+}
+
+@media (min-width:1600px) {
+  .wrap {
+    width: 65%;
+  }
+}
